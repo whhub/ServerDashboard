@@ -1,6 +1,27 @@
-<p>server-list works!</p>
-<div class="row row-cols-4 row-cols-sm-2 row-cols-xs-1">
-  <div class='col' *ngFor='let server of filteredServers'>
-    <label>{{server.name}}</label>
+<div class='card'>
+  <div class="card-header row justify-content-between">
+    <div class="col-3">ServerDashboard</div>
+    <div class="col-3">
+      <select >
+        <option selected>Choose Locations</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <label>Choose Versions</label>
+      <button (click)='showAll()'>SHOW ALL</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row row-cols-4 row-cols-sm-4 row-cols-xs-1">
+      <div class='col' *ngFor='let server of filteredServers'>
+        <div class='card'>
+          <label>{{server.name}}</label>
+          <label>{{server.location}}</label>
+          <label>{{server.version}}</label>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

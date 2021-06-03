@@ -26,6 +26,10 @@ export class ServerListComponent implements OnInit, OnDestroy {
     })
   }
 
+  showAll(): void {
+    this.filteredServers = this.servers;
+  }
+
   filteredServers: IServer[] = []
   servers: IServer[] = []
 
