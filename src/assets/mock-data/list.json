@@ -1,5 +1,4 @@
-{
-  "servers" : [ {
+ [ {
     "name" : "vierd3",
     "address" : "vierd3lb.agfahealthcare.com",
     "purpose" : "Development. Updated manually See also: http://wikihealthcare.agfa.net/display/Agility/VIERD3",
@@ -3731,5 +3730,5 @@
     "storeAddress" : "EIRIS81LB.med.agfa.be",
     "storePort" : "104",
     "storeConnection" : "EIRIS81_PRIORS@EIRIS81LB.med.agfa.be:104"
-  }]
-}
+}]
+

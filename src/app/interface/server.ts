@@ -1,6 +1,6 @@
-import { Node } from './node';
+import { INode } from './node';
 
-export interface Server {
+export interface IServer {
   name: string;
   address: string;
   purpose: string;
@@ -10,7 +10,7 @@ export interface Server {
   maintainer: string;
   installJob: string;
   updated: string;
-  nodes: Node[];
+  nodes: INode[];
   url: string;
   netbootURL: string;
   netbootDiagnosticDesktopURL: string;
