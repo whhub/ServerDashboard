@@ -3731,24 +3731,5 @@
     "storeAddress" : "EIRIS81LB.med.agfa.be",
     "storePort" : "104",
     "storeConnection" : "EIRIS81_PRIORS@EIRIS81LB.med.agfa.be:104"
-  }, {
-    "name" : "RCRIS81 - SMOKE",
-    "address" : "RCRIS81LB.med.agfa.be",
-    "purpose" : "Verification Ghent (Smoke Testing) on latest 8.1.4 build (release candidate) (asb-8.1.4.020)",
-    "location" : "Ghent",
-    "branch" : "8.1.4.020",
-    "aet" : "RCRIS81",
-    "maintainer" : "Wim Broekaert",
-    "installJob" : "http://jenkins01-iibu.agfahealthcare.com/job/asb-8.1.4.020/job/install%20on%20rcris81cs1.med.agfa.be/",
-    "updated" : "Whenever a new build is available",
-    "nodes" : [ {
-      "type" : "HUB",
-      "address" : "RCRIS81CS1.med.agfa.be",
-      "info" : "10.233.21.247",
-      "windowsDomain" : "",
-      "user" : "Administrator",
-      "password" : "service"
-    }, {
-      "type" : "HUB",
-      "address" : "RCRIS81CS2.med.agfa.be",
-     
+  }]
+}
