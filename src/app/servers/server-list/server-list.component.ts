@@ -22,16 +22,44 @@ export class ServerListComponent implements OnInit, OnDestroy {
       next: servers => {
         this.servers = servers;
         this.filteredServers = this.servers;
+        this.locations = this.servers.map(server => server.location)
+          .filter((value,index,self)=>self.indexOf(value)==index).sort();
+        this.versions = this.servers.map(server => server.version)
+          .filter((value, index, self) => self.indexOf(value) == index).sort();
       }
     })
   }
 
   showAll(): void {
     this.filteredServers = this.servers;
+    this.selectedLocation = ''
   }
 
   filteredServers: IServer[] = []
   servers: IServer[] = []
+  locations: string[] = []
+  versions: string[] = []
 
-  sub:Subscription;
+  get selectedLocation(): string {
+    console.log(`selected location is ${this._selectedLocation}`)
+    return this._selectedLocation;
+  }
+  set selectedLocation(value: string) {
+    console.log(`set selected location to ${value}`)
+    this._selectedLocation = value;
+    this.isShowAll = !this.locations.includes(value)
+  }
+
+  get isShowAll(): boolean {
+    return this._isShowAll;
+  }
+  set isShowAll(value: boolean) {
+    this._isShowAll = value;
+  }
+
+  sub: Subscription;
+
+
+  private _selectedLocation: string = 'Shanghai'
+  private _isShowAll = true;
 }
