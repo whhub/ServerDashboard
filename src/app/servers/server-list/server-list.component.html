@@ -1,12 +1,15 @@
 <div class='card'>
   <div class="card-header row justify-content-between">
     <div class="col-3">ServerDashboard</div>
-    <div class="col-3">
+    <div class="col-7">
       <select >
         <option selected disabled>Choose Locations</option>
         <option *ngFor='let location of locations' [value]='location'>{{location}}</option>
       </select>
-      <label>Choose Versions</label>
+      <select>
+        <option selected disabled>Choose Versions</option>
+        <option *ngFor='let version of versions' [value]='version'>{{version}}</option>
+      </select>
       <button (click)='showAll()' [disabled]='isShowAll'>SHOW ALL</button>
     </div>
   </div>
