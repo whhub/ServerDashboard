@@ -48,6 +48,7 @@ export class ServerListComponent implements OnInit, OnDestroy {
     console.log(`set selected location to ${value}`)
     this._selectedLocation = value;
     this.isShowAll = !this.locations.includes(value)
+    this.filteredServers = this.servers.filter(server=>server.location == value)
   }
 
   get isShowAll(): boolean {
