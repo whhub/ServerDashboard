@@ -1,5 +1,25 @@
 <div class='card'>
-  <label>{{server.name}}</label>
-  <label>{{server.location}}</label>
-  <label>{{server.version}}</label>
+  <div class='card-header'>
+    <a [href]='server.address' class="fs-3">{{server.name}}</a>
+    <label>{{server.purpose}}</label>
+    <div class="row justify-content-between">
+      <div class="row justify-content-between"></div>
+        <div class='col-3'>
+          <i class="fas fa-flag-usa"></i>
+          <b>{{server.branch}}</b>
+        </div>
+    </div>
+  </div>
+  <div class='card-body'>
+    <label class='row'>version:</label>
+    <b class='row'>{{server.version}}</b>
+    <label class='row'>updated:</label>
+    <b class='row'>{{server.updated}}</b>
+    <label class='row'>Maintainer(s);</label>
+    <b class='row'>{{server.maintainer}}</b>
+    <label class='row'>{{server.version}}</label>
+  </div>
+  <div class='card-footer'>
+    <button >details</button>
+  </div>
 </div>
